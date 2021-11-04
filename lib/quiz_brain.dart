@@ -35,4 +35,6 @@ class QuizzBrain {
   void nextQuestion() => _questionNumber < _questionBank.length - 1 ? _questionNumber++ : null;
   String getQuestionText() => _questionBank[_questionNumber].questionText;
   bool getCorrectAnswer() => _questionBank[_questionNumber].questionAnswer;
+  bool isFinished() => _questionNumber >= _questionBank.length - 1 ? true : false;
+  void reset() => _questionNumber = 0;
 }
